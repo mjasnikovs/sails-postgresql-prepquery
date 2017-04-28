@@ -6,12 +6,33 @@
 
 A [Waterline](https://github.com/balderdashy/waterline) adapter for PostgreSQL. May be used in a [Sails](https://github.com/balderdashy/sails) app or anything using Waterline for the ORM.
 
+## PrepQuery
+sails-postgresql v0.12.2 with prepQuery
+
+prepQuery is used for performance optimization. x2 faster then raw query. millions times faster then sails adapter. Doh....
+For personal usage.
+
+### example,
+```javascript
+      User.prepQuery({
+        text: `select * from users where id = $1`,
+        type: ['int'],
+        values: [clientSession.uid]
+      },
+      (err, result) => {
+        if (err) {return cb(err)}
+        if (!result.rowCount) {return cb(null, [])}
+        return cb(null, result.rows)
+      })
+
+```
+
 ## Install
 
 Install is through NPM.
 
 ```bash
-$ npm install sails-postgresql
+$ npm install sails-postgresql-prepquery
 ```
 
 ## Configuration
