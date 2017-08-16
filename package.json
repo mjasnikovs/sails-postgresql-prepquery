@@ -176,7 +176,7 @@
   "dependencies": {
     "async": "1.5.2",
     "lodash": "3.10.1",
-    "pg": "4.5.5",
+    "pg": "4.5.7",
     "waterline-cursor": "0.0.7",
     "waterline-errors": "0.10.1",
     "waterline-sequel": "0.6.4"
