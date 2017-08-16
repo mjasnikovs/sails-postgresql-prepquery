@@ -234,7 +234,7 @@
     "test": "make test"
   },
   "url": "https://github.com/mjasnikovs/sails-postgresql-prepquery",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "waterlineAdapter": {
     "waterlineVersion": "~0.10.0",
     "interfaces": [
