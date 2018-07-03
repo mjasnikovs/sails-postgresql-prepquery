@@ -179,7 +179,8 @@
     "pg": "4.5.7",
     "waterline-cursor": "0.0.7",
     "waterline-errors": "0.10.1",
-    "waterline-sequel": "0.6.4"
+    "waterline-sequel": "0.6.4",
+    "snyk": "^1.88.0"
   },
   "description": "a postgreSQL adapter for Waterline and Sails.js",
   "devDependencies": {
@@ -231,7 +232,9 @@
   },
   "scripts": {
     "docker": "docker-compose run adapter bash",
-    "test": "make test"
+    "test": "make test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "url": "https://github.com/mjasnikovs/sails-postgresql-prepquery",
   "version": "0.12.4",
@@ -250,5 +253,6 @@
       "autoIncrement",
       "schemas"
     ]
-  }
+  },
+  "snyk": true
 }
